@@ -45,11 +45,13 @@ public class BankApp {
 				System.out.println("Account already exists!!!!!!!");
 				// enter name
 				accountName = Validator.getString(sc,"Enter Customer Name or -1 to stop creating accounts : ");
-				while (!accountName.matches(regex2)) {
+				while (!accountName.equalsIgnoreCase("-1") && !accountName.matches(regex2)) {
 					accountName = Validator.getString(sc,
 							"Enter a valid name: ");
 				}
-
+				if (accountName.equalsIgnoreCase("-1")) {
+					break;
+				}
 				// enter type
 				accType = Validator.getInt(sc, "Enter account type: ");
 				while (accType != 1 && accType != 2) {
