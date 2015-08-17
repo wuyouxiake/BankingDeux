@@ -136,7 +136,7 @@ public class BankApp {
 									"Enter a valid date of the transaction: (please enter in dd-MMM-yyyy format): ");
 				}
 
-				System.out.println("1 " + tmp);
+				//System.out.println("1 " + tmp);
 				SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy");
 				Date date = new Date();
 
